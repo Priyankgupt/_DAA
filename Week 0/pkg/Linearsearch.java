@@ -29,7 +29,7 @@ public class Linearsearch {
       }
       else
       {
-    	  System.out.println("Elemenys is  present in array at:" +result);
+    	  System.out.println(" present " +result);
     	 
       }
       sc.close();
@@ -43,7 +43,7 @@ public class Linearsearch {
 			if(arr[i]==key)
 			{ 
 				
-				return i;
+				return i+1;
           	
 			}
 			
