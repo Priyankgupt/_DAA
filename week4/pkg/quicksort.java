@@ -20,9 +20,11 @@ Output Format:
    Third line will give total number of swaps required.
 
 Sample I/O Problem II:
-     3
+     1
      8
      23 65 21 79 46 89 45 32
+     Output:-
+     21 23 32 45 46 65 79 89
  */
 package pkg;
 import java.util.Scanner;
