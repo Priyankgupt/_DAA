@@ -1,3 +1,23 @@
+/* Priyank Gupta B.tech Cse (SE) 2015092
+ Question: Given an unsorted array of integers, design an algorithm and implement a program to sort this array using selection sort. Your program should also find number of comparisons and number of swaps required.
+	Input Format:	
+		The first line contains number of test cases, T.
+		For each test case, there will be two input lines. First line contains n (the size of array).
+		Second line contains space-separated integers describing array.
+	Output Format:
+		The output will have T number of lines.
+		For each test case T, there will be three output lines.
+		First line will give the sorted array. Second line will give total number of comparisons.
+		Third line will give total number of swaps required.
+	Sample Input:
+		1
+		8
+		-13 65-21 76 46 89 45 12
+	Sample Output:
+		-21-13 12 45 46 65 76 89
+		Comparisons = 28
+		Swaps j = 7
+  */
 package pkg;
 
 import java.util.Scanner;
