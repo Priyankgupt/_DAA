@@ -43,17 +43,18 @@ public class mergesort
 			  arr[i] = sc.nextInt();
 		  }
 		  mergesort ob = new mergesort();
-		  ob.sort(arr , 0 , arr.length-1);
+		  int b=ob.sort(arr , 0 , arr.length-1);
 		  System.out.println("\nSorted array");
 	        for (int i = 0; i < n; ++i)
 	            System.out.print(arr[i] + " ");
 	        System.out.println();
+			System.out.println("Comparisons="+b);
 		}
 	        sc.close();
 		
 
 	}
-	public static void merge(int arr[] , int l , int m , int r)
+	public static int merge(int arr[] , int l , int m , int r)
 	{
 		// Merges two sub-arrays of arr[].
 	    // First sub-array is arr[l..m]
@@ -79,17 +80,20 @@ public class mergesort
 	  
 	        // Initial index of merged subarray array
 	        int k = l;
+		int count =0;
 	        while (i < n1 && j < n2) 
 	        {
 	            if (L[i] <= R[j]) 
 	            {
 	                arr[k] = L[i];
 	                i++;
+			    count++;
 	            }
 	            else
 	            {
 	                arr[k] = R[j];
 	                j++;
+			    count++;
 	            }
 	            k++;
 	        }
@@ -109,12 +113,14 @@ public class mergesort
 	            j++;
 	            k++;
 	        }
+		return count;
 	    }
 	  
 	    // Main function that sorts arr[l..r] using merge()
-	    void sort(int arr[], int l, int r)
+	   int sort(int arr[], int l, int r)
 	    {
-	        if (l < r) 
+	        int a=0;
+		   if (l < r) 
 	        {
 	            // Find the middle point
 	            int m =l+ (r-l)/2;
@@ -124,8 +130,9 @@ public class mergesort
 	            sort(arr, m + 1, r);
 	  
 	            // Merge the sorted halves
-	            merge(arr, l, m, r);
+	            a= merge(arr, l, m, r);
 	        }
+		   return a;
 	    }
 }
 
