@@ -24,7 +24,6 @@ Output :-
  */
 package pkg;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 public class kthelement 
 {
@@ -58,4 +57,5 @@ public class kthelement
           System.out.print("K'th smallest element is " + kthSmallest(arr, k));
         }
     }
+    sc.close();
 }
